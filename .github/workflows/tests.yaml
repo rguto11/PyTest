@@ -22,4 +22,6 @@ jobs:
           pip install pytest
 
       - name: Executar testes
+	env:
+		PYTHONPATH: .:${PYTHONPATH}
         run: pytest --maxfail=1 --disable-warnings -q
